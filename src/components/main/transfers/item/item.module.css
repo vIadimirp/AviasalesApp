@@ -1,0 +1,34 @@
+label.item {
+    display: flex;
+    gap: .5em;
+    align-items: center;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    font-size: 0.6em;
+}
+label.item:hover {
+    background-color: #f1fcff;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    appearance: none;
+    --webkit-appearance: none;
+    --moz-appearance: none;
+}
+
+span.checkbox {
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    /* background-color: tomato; */
+    background-image: url("../../../../assets/checkbox.svg");
+    background-size: contain;
+}
+input:checked + span.checkbox {
+    background-image: url("../../../../assets/checkbox_checked.svg");
+}
+
+span.name {
+    margin-left: 1.5em;
+}

@@ -1,0 +1,22 @@
+div.main {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    width: 100%;
+    padding: 0 5em;
+    min-height: 100vh;
+    margin-bottom: 2.5em;
+}
+
+
+@media (max-width: 1100px) {
+    div.main {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    div.main {
+        padding: 0 1em;
+    }
+}

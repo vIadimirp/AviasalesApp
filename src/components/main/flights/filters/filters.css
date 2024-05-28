@@ -1,0 +1,54 @@
+div.filters {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+}
+
+button.filter {
+    width: 1fr;
+    border: 1px solid #dfe5ec;
+    background-color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 1em 0;
+}
+button.filter.active {
+    background-color: #2196f3;
+    color: #fff;
+}
+button.filter:not(:last-child) {
+    border-right: none;
+}
+button.filter:first-child {
+    border-top-left-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+}
+button.filter:last-child {
+    border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+}
+
+
+@media (max-width: 700px) {
+    div.filters {
+        display: flex;
+        flex-direction: column;
+    }
+
+    button.filter:first-child {
+        border-top-left-radius: 0.5em;
+        border-top-right-radius: 0.5em;
+        border-bottom-left-radius: 0;
+    }
+
+    button.filter:last-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0.5em;
+        border-bottom-left-radius: 0.5em;
+    }
+
+    button.filter:not(:last-child) {
+        border-right: 1px solid #dfe5ec;
+    }
+}
